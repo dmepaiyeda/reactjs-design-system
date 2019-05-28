@@ -1,0 +1,33 @@
+{
+  "name": "reactjs-design-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmepaiyeda/reactjs-design-system.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmepaiyeda/reactjs-design-system/issues"
+  },
+  "homepage": "https://github.com/dmepaiyeda/reactjs-design-system#readme",
+  "devDependencies": {
+    "@storybook/addon-options": "^5.0.11",
+    "@storybook/react": "^5.0.11",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  }
+}
