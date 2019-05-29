@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/dmepaiyeda/reactjs-design-system#readme",
   "devDependencies": {
+    "@storybook/addon-actions": "^5.0.11",
     "@storybook/addon-options": "^5.0.11",
     "@storybook/react": "^5.0.11",
     "babel-cli": "^6.26.0",
@@ -29,5 +31,9 @@
   "peerDependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
+  },
+  "dependencies": {
+    "babel-loader": "^7.1.5",
+    "react-jss": "^8.6.1"
   }
 }
