@@ -1,39 +1,37 @@
 {
-  "name": "reactjs-design-system",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "react-design-system",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
     "storybook": "start-storybook"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dmepaiyeda/reactjs-design-system.git"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dmepaiyeda/reactjs-design-system/issues"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
-  "homepage": "https://github.com/dmepaiyeda/reactjs-design-system#readme",
   "devDependencies": {
-    "@storybook/addon-actions": "^5.0.11",
-    "@storybook/addon-options": "^5.0.11",
+    "@babel/core": "^7.4.5",
     "@storybook/react": "^5.0.11",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
-  },
-  "peerDependencies": {
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
-  },
-  "dependencies": {
-    "babel-loader": "^7.1.5",
-    "react-jss": "^8.6.1"
+    "babel-loader": "^8.0.6"
   }
 }
