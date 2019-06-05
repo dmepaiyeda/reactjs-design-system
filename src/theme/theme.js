@@ -1,26 +1,13 @@
 const theme = {
-    space: {
-
-    },
-    text: {
-
-    },
-    button: {
-        margin: {
-            horizontal: `0.2em`,
-            vertical: `0em`
-          },
-          padding: {
-            horizontal: `1.5em`,
-            vertical: `1.5em`
-          },
-          shadow: {
-            offset: `(0em / 2)`
-          }
-    },
     colors:{
-        
-    }
+        black: '#000000',
+        white: '#FFFFFF'
+    }, 
+    fonts:{
+        sansSerif: 'Apercu, Calibri, sans-serif'
+    },
+    fontSizes:[14],
+    fontWeights:[700]
 }
 
 export default theme;

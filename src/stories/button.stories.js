@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import theme from "../../src/theme/theme";
@@ -10,9 +9,9 @@ import Button from "./button";
 //   .add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
 storiesOf('Button', module)
-  .add('Outlined Button', () => 
+  .add('Outline Button', () => 
     <ThemeProvider theme={theme}>
-      <Button onClick={action('clicked')}>Outlined Button</Button> 
+      <Button onClick={action('clicked')}>OUTLINE BUTTON</Button> 
     </ThemeProvider>
     )
 
