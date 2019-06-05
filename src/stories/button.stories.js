@@ -2,17 +2,24 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { Button } from '@storybook/react/demo';
+import theme from "../../src/theme/theme";
+import { ThemeProvider } from 'styled-components';
+import Button from "./button";
 
 // storiesOf('Skincare', module)
 //   .add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
 storiesOf('Button', module)
-  .add('Primary Button', () => <Button onClick={action('clicked')}>Primary Button</Button>)
-  .add('Secondary Button', () => (
+  .add('Outlined Button', () => 
+    <ThemeProvider theme={theme}>
+      <Button onClick={action('clicked')}>Outlined Button</Button> 
+    </ThemeProvider>
+    )
+
+  .add('Gradient Button', () => (
     <Button onClick={action('clicked')}>
-      <span aria-label="secondard-button">
-        Secondary Button
+      <span aria-label="gradient-button">
+        Gradient Button
       </span>
     </Button>
   ));
