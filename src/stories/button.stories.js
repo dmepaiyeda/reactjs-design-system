@@ -8,17 +8,14 @@ import Button from "./button";
 // storiesOf('Skincare', module)
 //   .add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
-storiesOf('Button', module)
+storiesOf('Buttons', module)
   .add('Outline Button', () => 
     <ThemeProvider theme={theme}>
-      <Button onClick={action('clicked')}>OUTLINE BUTTON</Button> 
-    </ThemeProvider>
-    )
+      <Button onClick={action('clicked')} textAlign="center">OUTLINE BUTTON</Button> 
+    </ThemeProvider>);
+  
 
-  .add('Gradient Button', () => (
-    <Button onClick={action('clicked')}>
-      <span aria-label="gradient-button">
-        Gradient Button
-      </span>
-    </Button>
-  ));
+
+
+
+  

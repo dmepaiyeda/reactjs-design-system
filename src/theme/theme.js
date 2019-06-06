@@ -1,9 +1,9 @@
 const theme = {
-    colors:{
+    colors: {
         black: '#000000',
         white: '#FFFFFF'
     }, 
-    fonts:{
+    fonts: {
         sansSerif: 'Apercu, Calibri, sans-serif'
     },
     fontSizes:[14],
