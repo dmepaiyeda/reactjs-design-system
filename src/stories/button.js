@@ -9,6 +9,7 @@ const Button = styled.button`
   padding: 7px 6px;
   border-radius: 3px;
   background-color: ${props => props.theme.colors.white};
+  text-align: center;
   width: 30%;
   min-height: 16px;
   font-family: ${props => props.theme.fonts.sansSerif};
