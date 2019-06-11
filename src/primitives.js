@@ -1,66 +1,102 @@
-import system from 'system-components';
+import { space, color, layout, typography } from 'styled-system'
+import styled from 'styled-components'
 
-export const Card = system(
+// export const Card = styled(
+//     {
+//         boxSizing: 'border-box',
+//         minWidth: 0,
+//         maxWidth: '25%',
+//         bg: 'lightGray', 
+//         border: 1
+//     },
+//     //core
+//     theme.width,
+//     theme.colors,
+//     theme.fonts,
+//     theme.width, 
+//     theme.fontSizes,
+//     theme.fontWeights
+// );
+
+export const Card = styled.div(
     {
-        borderColor: 'white',
         boxSizing: 'border-box',
         minWidth: 0,
-        border: 1,
-        bg: 'white',
     },
     //core
-    'colors',
-    'fonts',
-    'fontSizes', 
-    'fontWeights'
+    space,
+    color,
+    typography,
+    layout, 
 );
+
+Card.defaultProps = {
+    maxWidth: '25%',
+    bg: 'lightGray', 
+    border: 1,
+}
 
 Card.displayName = 'Card';
 
-export const Box = system(
-    //core
-    'width'
-    
-);
+// export const Box = styled(
+//     {
+//         borderColor: 'blue',
+//         border: 2
+//     },
+//     //core
+//     'width',
+//     'colors'
+// );
 
-Box.displayName = 'Box';
+// Box.displayName = 'Box';
 
-export const ProductImg = system(
+export const ProductImg = styled(
     {
         as: 'img',
-        p: 1,
-        border: 1,
         borderColor: 'lightGray',
-        height: 'auto',
-        width: 'auto'
     },
     'height',
     'width'
 );
 ProductImg.displayName = 'ProductImg'
 
-export const Heading = system(
+export const Heading = styled(
     {
         as: 'h1',
-        fontSize: 6,
         fontFamily: 'sansSerif', 
-        color: 'black'
+        color: 'black',
+        fontWeight: 700
     },
     'fonts',
     'fontSize',
+    'fontWeights',
     'fontFamily',
     'colors'
 );
 Heading.displayName = 'Heading';
 
-export const Text = system(
+export const Text = styled(
     {
         as: 'p',
         fontFamily: 'sansSerif',
-        color: 'black'
+        color: 'black',
     },
     'fonts',
     'fontFamily',
+    'fontWeights',
     'colors'
 );
 Text.displayName = 'Text';
+
+export const Button = styled(
+    {
+        fontSize: 14,
+        fontWeight: 700,
+
+    },
+    'fontSize',
+    'fontWeights',
+    'colors',
+    'width',
+    'fonts'
+)

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Box, ProductImg, Heading, Text } from '../../src/primitives'
+import { Card, ProductImg, Heading, Text } from '../primitives'
 
 // const Card = styled.div`
 //     fontSize: ${props => props.theme.fontSizes[1]}px;
@@ -10,12 +10,10 @@ import { Card, Box, ProductImg, Heading, Text } from '../../src/primitives'
 // `
 
 export const ProductCard = ({ image, title, subtitle, ...props }) => (
-    <Card {...props}  p={[3, 4, 4]}>
-        <Box width={1/2}>
-            <ProductImg width={1} mb={2} src={image}/>
-            <Heading as="h1" fontSize={20} m={4}>{title}</Heading>
-            <Text as="p">{subtitle}</Text>
-        </Box>
+    <Card {...props} width='25%'>
+        <ProductImg width={1} height='25%' src={image}/>
+        <Heading as="h1" m="auto">{title}</Heading>
+        <Text as="p">{subtitle}</Text>
     </Card>
 );
 
