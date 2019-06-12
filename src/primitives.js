@@ -1,42 +1,87 @@
-import { space, color, layout, typography } from 'styled-system'
-import styled from 'styled-components'
-
-// export const Card = styled(
-//     {
-//         boxSizing: 'border-box',
-//         minWidth: 0,
-//         maxWidth: '25%',
-//         bg: 'lightGray', 
-//         border: 1
-//     },
-//     //core
-//     theme.width,
-//     theme.colors,
-//     theme.fonts,
-//     theme.width, 
-//     theme.fontSizes,
-//     theme.fontWeights
-// );
+import { space, color, layout, typography } from "styled-system";
+import styled from "styled-components";
 
 export const Card = styled.div(
-    {
-        boxSizing: 'border-box',
-        minWidth: 0,
-    },
-    //core
-    space,
-    color,
-    typography,
-    layout, 
+  {
+    boxSizing: "border-box",
+    minWidth: 0
+  },
+  //core
+  space,
+  color,
+  typography,
+  layout
 );
 
 Card.defaultProps = {
-    maxWidth: '25%',
-    bg: 'lightGray', 
-    border: 1,
-}
+  maxWidth: "25%",
+  bg: "lightGray",
+  border: 1
+};
 
-Card.displayName = 'Card';
+export const ProductImg = styled.img(layout);
+
+ProductImg.defaultProps = {
+  borderColor: "lightGray"
+};
+
+ProductImg.displayName = "ProductImg";
+
+export const BackgroundImg = styled.div(
+  props => ({
+    height: 0,
+    paddingBottom: `${props.aspectRatio * 100}%`,
+    backgroundSize: "cover",
+    backgroundPosition: "50% 50%",
+    backgroundImage: `url(${props.image})`
+  }),
+  layout
+);
+
+BackgroundImg.defaultProps = {
+  borderColor: "lightGray",
+  aspectRatio: 1
+};
+
+BackgroundImg.displayName = "BackgroundImg";
+
+export const Heading = styled.h1(color, space, typography, layout);
+
+Heading.defaultProps = {
+  fontFamily: "sansSerif",
+  color: "black",
+  fontWeight: 700
+};
+Heading.displayName = "Heading";
+
+export const Text = styled.p(typography, layout, space, color);
+Text.displayName = "Text";
+
+Text.defaultProps = {
+  fontFamily: "sansSerif",
+  color: "black"
+};
+
+const InlineText = styled(Text)``;
+
+InlineText.defaultProps = {
+  as: "span"
+};
+
+export const Button = styled.button(
+  {
+    fontSize: 14,
+    fontWeight: 700
+  },
+  "fontSize",
+  "fontWeights",
+  "colors",
+  "width",
+  "fonts"
+);
+
+Button.displayName = "Box";
+Button.defaultProps = {};
 
 // export const Box = styled(
 //     {
@@ -49,54 +94,3 @@ Card.displayName = 'Card';
 // );
 
 // Box.displayName = 'Box';
-
-export const ProductImg = styled(
-    {
-        as: 'img',
-        borderColor: 'lightGray',
-    },
-    'height',
-    'width'
-);
-ProductImg.displayName = 'ProductImg'
-
-export const Heading = styled(
-    {
-        as: 'h1',
-        fontFamily: 'sansSerif', 
-        color: 'black',
-        fontWeight: 700
-    },
-    'fonts',
-    'fontSize',
-    'fontWeights',
-    'fontFamily',
-    'colors'
-);
-Heading.displayName = 'Heading';
-
-export const Text = styled(
-    {
-        as: 'p',
-        fontFamily: 'sansSerif',
-        color: 'black',
-    },
-    'fonts',
-    'fontFamily',
-    'fontWeights',
-    'colors'
-);
-Text.displayName = 'Text';
-
-export const Button = styled(
-    {
-        fontSize: 14,
-        fontWeight: 700,
-
-    },
-    'fontSize',
-    'fontWeights',
-    'colors',
-    'width',
-    'fonts'
-)
