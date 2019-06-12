@@ -1,4 +1,4 @@
-import { space, color, layout, typography } from "styled-system";
+import { space, color, layout, typography, border } from "styled-system";
 import styled from "styled-components";
 
 export const Card = styled.div(
@@ -45,7 +45,7 @@ BackgroundImg.defaultProps = {
 
 BackgroundImg.displayName = "BackgroundImg";
 
-export const Heading = styled.h1(color, space, typography, layout);
+export const Heading = styled.p(color, space, typography, layout);
 
 Heading.defaultProps = {
   fontFamily: "sansSerif",
@@ -62,26 +62,30 @@ Text.defaultProps = {
   color: "black"
 };
 
-const InlineText = styled(Text)``;
+export const Button = styled.button(space, color, border, typography, layout);
 
-InlineText.defaultProps = {
-  as: "span"
+Button.displayName = "Button";
+Button.defaultProps = {
+  fontSize: 14,
+  fontWeight: 700,
+  fontFamily: "sansSerif",
+  bg: "white"
 };
 
-export const Button = styled.button(
-  {
-    fontSize: 14,
-    fontWeight: 700
-  },
-  "fontSize",
-  "fontWeights",
-  "colors",
-  "width",
-  "fonts"
-);
+// export const Button = styled.button(
+//   {
+//     fontSize: 14,
+//     fontWeight: 700
+//   },
+//   "fontSize",
+//   "fontWeights",
+//   "colors",
+//   "width",
+//   "fonts"
+// );
 
-Button.displayName = "Box";
-Button.defaultProps = {};
+// Button.displayName = "Box";
+// Button.defaultProps = {};
 
 // export const Box = styled(
 //     {
