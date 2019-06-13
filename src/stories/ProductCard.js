@@ -1,5 +1,11 @@
 import React from "react";
-import { Card, Heading, Text, BackgroundImg } from "../../src/primitives";
+import {
+  Card,
+  Heading,
+  Text,
+  BackgroundImg,
+  Container
+} from "../../src/primitives";
 import { Buttons } from "./Button";
 
 export const ProductCard = ({ image, title, subtitle, ...props }) => (
@@ -8,7 +14,9 @@ export const ProductCard = ({ image, title, subtitle, ...props }) => (
     <Heading as="h1" m="auto">
       {title}
     </Heading>
-    <Text m="auto">{subtitle}</Text>
-    <Buttons />
+    <Text my={2}>{subtitle}</Text>
+    <Container textAlign="center">
+      <Buttons m={4} />
+    </Container>
   </Card>
 );

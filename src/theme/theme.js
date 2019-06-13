@@ -3,7 +3,7 @@ const theme = {
     black: "#000",
     white: "#FFF"
   },
-  space: [0, 4, 7, 8, 16, 32, 64, 128, 256, 512],
+  space: [0, 4, 6, 7, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
     sansSerif: "Apercu, Calibri, sans-serif"
   },

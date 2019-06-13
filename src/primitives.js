@@ -19,6 +19,11 @@ Card.defaultProps = {
   border: 1
 };
 
+export const Container = styled.div(layout, space, border, typography);
+Container.defaultProps = {
+  display: "block"
+};
+
 export const ProductImg = styled.img(layout);
 
 ProductImg.defaultProps = {
@@ -50,7 +55,9 @@ export const Heading = styled.p(color, space, typography, layout);
 Heading.defaultProps = {
   fontFamily: "sansSerif",
   color: "black",
-  fontWeight: 700
+  fontWeight: 700,
+  lineHeight: 2,
+  fontSize: 16
 };
 Heading.displayName = "Heading";
 
@@ -59,42 +66,22 @@ Text.displayName = "Text";
 
 Text.defaultProps = {
   fontFamily: "sansSerif",
-  color: "black"
+  color: "black",
+  fontSize: 14
 };
 
 export const Button = styled.button(space, color, border, typography, layout);
-
 Button.displayName = "Button";
 Button.defaultProps = {
   fontSize: 14,
   fontWeight: 700,
   fontFamily: "sansSerif",
-  bg: "white"
+  bg: "white",
+  border: 1,
+  borderColor: "black",
+  borderStyle: "solid",
+  borderRadius: 3,
+  textAlign: "center",
+  minHeight: 16,
+  lineHeight: 1
 };
-
-// export const Button = styled.button(
-//   {
-//     fontSize: 14,
-//     fontWeight: 700
-//   },
-//   "fontSize",
-//   "fontWeights",
-//   "colors",
-//   "width",
-//   "fonts"
-// );
-
-// Button.displayName = "Box";
-// Button.defaultProps = {};
-
-// export const Box = styled(
-//     {
-//         borderColor: 'blue',
-//         border: 2
-//     },
-//     //core
-//     'width',
-//     'colors'
-// );
-
-// Box.displayName = 'Box';
