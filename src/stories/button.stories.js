@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { ThemeProvider } from "styled-components";
 import theme from "../../src/theme/theme";
-import { Buttons } from "./Button";
+import { Buttons } from "./button";
 
 storiesOf("Elements|Buttons", module).add("Outline Button", () => (
   <div>

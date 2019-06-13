@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "../../src/primitives";
+import { Button } from "../primitives";
 import { action } from "@storybook/addon-actions";
 
 export const Buttons = ({ ...props }) => (

@@ -6,7 +6,7 @@ import {
   BackgroundImg,
   Container
 } from "../../src/primitives";
-import { Buttons } from "./Button";
+import { Buttons } from "./button";
 
 export const ProductCard = ({ image, title, subtitle, ...props }) => (
   <Card {...props} width={1 / 3}>
