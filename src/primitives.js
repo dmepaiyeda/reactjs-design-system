@@ -15,7 +15,7 @@ export const Card = styled.div(
 
 Card.defaultProps = {
   maxWidth: "25%",
-  bg: "lightGray",
+  bg: "#fafafa",
   border: 1
 };
 
@@ -27,7 +27,7 @@ Container.defaultProps = {
 export const ProductImg = styled.img(layout);
 
 ProductImg.defaultProps = {
-  borderColor: "lightGray"
+  borderColor: "#fafafa"
 };
 
 ProductImg.displayName = "ProductImg";
@@ -44,7 +44,7 @@ export const BackgroundImg = styled.div(
 );
 
 BackgroundImg.defaultProps = {
-  borderColor: "lightGray",
+  borderColor: "#fafafa",
   aspectRatio: 1
 };
 
@@ -56,7 +56,6 @@ Heading.defaultProps = {
   fontFamily: "sansSerif",
   color: "black",
   fontWeight: 700,
-  lineHeight: 2,
   fontSize: 16
 };
 Heading.displayName = "Heading";
@@ -67,7 +66,8 @@ Text.displayName = "Text";
 Text.defaultProps = {
   fontFamily: "sansSerif",
   color: "black",
-  fontSize: 14
+  fontSize: 14,
+  fontWeight: 300
 };
 
 export const Button = styled.button(space, color, border, typography, layout);
