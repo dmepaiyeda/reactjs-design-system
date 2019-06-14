@@ -14,7 +14,7 @@ export const ProductCard = ({ image, title, subtitle, ...props }) => (
     <Container p={5}>
       <Heading>{title}</Heading>
       <Text>{subtitle}</Text>
-      <Buttons width={1} />
+      <Buttons width="100%" />
     </Container>
   </Card>
 );
