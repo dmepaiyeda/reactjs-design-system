@@ -4,7 +4,8 @@ import {
   Heading,
   Text,
   BackgroundImg,
-  Container
+  Container,
+  Blocklink
 } from '../../src/primitives';
 import { Buttons } from './button';
 
@@ -12,10 +13,10 @@ export const ProductCard = ({ image, title, subtitle, ...props }) => (
   <Card {...props} width={1 / 3}>
     <BackgroundImg width={1} aspectRatio={4 / 3} image={image} />
     <Container p={5}>
-      <a href="djdk">
+      <Blocklink href="#test">
         <Heading>{title}</Heading>
         <Text>{subtitle}</Text>
-      </a>
+      </Blocklink>
       <Buttons width={[1, 1, 1]} />
     </Container>
   </Card>

@@ -86,3 +86,27 @@ Button.defaultProps = {
   minHeight: 40,
   lineHeight: 1
 };
+
+// export const Blocklink = styled(link)`
+//   text-decoration: none;
+
+//   &:focus,
+//   &:hover,
+//   &:visited,
+//   &:link,
+//   &:active {
+//     text-decoration: none;
+//   }
+// `;
+
+export const Link = styled.a`
+  text-decoration: none;
+  color: blue;
+`;
+
+export const Blocklink = styled(Link)`
+  &:visited,
+  &:hover {
+    text-decoration: underline blue;
+  }
+`;
