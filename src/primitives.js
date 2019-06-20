@@ -71,7 +71,19 @@ Text.defaultProps = {
   fontWeight: 300
 };
 
-export const Button = styled.button(space, color, border, typography, layout);
+export const Button = styled.button(
+  {
+    transition: 'box-shadow 0.3s ease-in-out',
+    '&:hover': {
+      boxShadow: '0 0 6px 0 rgba(0, 0, 0, 0.5)'
+    }
+  },
+  space,
+  color,
+  border,
+  typography,
+  layout
+);
 Button.displayName = 'Button';
 Button.defaultProps = {
   fontSize: 14,
@@ -101,12 +113,12 @@ Button.defaultProps = {
 
 export const Link = styled.a`
   text-decoration: none;
-  color: blue;
 `;
 
 export const Blocklink = styled(Link)`
-  &:visited,
-  &:hover {
-    text-decoration: underline blue;
+  &:focus > *,
+  &:hover > * {
+    text-decoration: underline ${props => props.theme.colors.blue};
+    color: ${props => props.theme.colors.blue};
   }
 `;

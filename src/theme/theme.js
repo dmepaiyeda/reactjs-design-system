@@ -1,7 +1,8 @@
 const theme = {
   colors: {
     black: '#000',
-    white: '#FFF'
+    white: '#FFF',
+    blue: '#00F'
   },
   space: [0, 2, 4, 6, 7, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
