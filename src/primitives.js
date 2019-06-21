@@ -24,7 +24,7 @@ Container.defaultProps = {
   display: 'block'
 };
 
-export const ProductImg = styled.img(layout);
+export const ProductImg = styled.img(layout); //styled system
 
 ProductImg.defaultProps = {
   borderColor: '#fafafa'
@@ -111,6 +111,7 @@ Button.defaultProps = {
 //   }
 // `;
 
+//styled components
 export const Link = styled.a`
   text-decoration: none;
 `;
