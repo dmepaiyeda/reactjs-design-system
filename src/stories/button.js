@@ -1,9 +1,9 @@
-import React from "react";
-import { Button } from "../../src/primitives";
-import { action } from "@storybook/addon-actions";
+import React from 'react';
+import { OutlineButton } from '../../src/primitives';
+import { action } from '@storybook/addon-actions';
 
 export const Buttons = ({ ...props }) => (
-  <Button {...props} onClick={action("clicked")} py={3} px={2}>
+  <OutlineButton {...props} onClick={action('clicked')}>
     OUTLINE BUTTON
-  </Button>
+  </OutlineButton>
 );

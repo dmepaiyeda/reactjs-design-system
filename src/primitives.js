@@ -71,19 +71,7 @@ Text.defaultProps = {
   fontWeight: 300
 };
 
-export const Button = styled.button(
-  {
-    transition: 'box-shadow 0.3s ease-in-out',
-    '&:hover': {
-      boxShadow: '0 0 6px 0 rgba(0, 0, 0, 0.5)'
-    }
-  },
-  space,
-  color,
-  border,
-  typography,
-  layout
-);
+export const Button = styled.button(space, color, border, typography, layout);
 Button.displayName = 'Button';
 Button.defaultProps = {
   fontSize: 14,
@@ -98,6 +86,29 @@ Button.defaultProps = {
   minHeight: 40,
   lineHeight: 1
 };
+
+export const OutlineButton = styled(Button)`
+  cursor: pointer;
+  position: relative;
+  transition: all 0.5 cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  &::after {
+    content: '';
+    box-shadow: 0px 0px 16px 2px rgba(0, 0, 0, 0.2);
+    border-radius: inherit;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  &:hover::after,
+  &:focus::after {
+    opacity: 1;
+  }
+`;
 
 // export const Blocklink = styled(link)`
 //   text-decoration: none;
