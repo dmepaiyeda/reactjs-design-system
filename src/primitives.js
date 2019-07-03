@@ -39,7 +39,7 @@ export const BackgroundImg = styled.div(
     backgroundSize: 'cover',
     backgroundPosition: '50% 50%',
     backgroundImage: `url(${props.image})`,
-    ':hover': {
+    '&:hover': {
       backgroundImage: `url(${props.secondImage})`
     }
   }),
