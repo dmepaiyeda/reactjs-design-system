@@ -5,7 +5,8 @@ import {
   Text,
   BackgroundImg,
   Container,
-  Blocklink
+  Blocklink,
+  QuickView
 } from '../../src/primitives';
 import { Buttons } from './button';
 
@@ -24,6 +25,7 @@ export const ProductCard = ({
         image={image}
         secondImage={secondImage}
       />
+      <QuickView />
     </a>
     <Container p={5}>
       <Blocklink href="#test">
