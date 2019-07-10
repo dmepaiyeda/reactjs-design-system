@@ -21,18 +21,16 @@ Card.defaultProps = {
 
 export const QuickView = styled.div(
   props => ({
+    position: 'absolute',
     height: 20,
-    paddingBottom: `${props.aspectRatio * 100}%`,
-    backgroundSize: 'cover',
-    backgroundPosition: '50% 50%',
+    bottom: 0,
     color: 'blue'
+    // zIndex: 1
   }),
   layout,
   space
 );
-QuickView.defaultProps = {
-  position: 'absolute'
-};
+QuickView.defaultProps = {};
 
 export const Container = styled.div(layout, space, border, typography);
 Container.defaultProps = {

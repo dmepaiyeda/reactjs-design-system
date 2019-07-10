@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import {
   Card,
   Heading,
@@ -10,6 +11,18 @@ import {
 } from '../../src/primitives';
 import { Buttons } from './button';
 
+const ProductCardContainer = styled(Card)`
+  position: relative;
+
+  ${QuickView} {
+    display: none;
+  }
+
+  &:hover ${QuickView} {
+    display: block;
+  }
+`;
+
 export const ProductCard = ({
   image,
   secondImage,
@@ -17,15 +30,15 @@ export const ProductCard = ({
   subtitle,
   ...props
 }) => (
-  <Card {...props} width={1 / 3}>
-    <a href="#test">
+  <ProductCardContainer {...props} width={1 / 3}>
+    <a href="#test" style={{ position: 'relative' }}>
       <BackgroundImg
         width={1}
         aspectRatio={4 / 3}
         image={image}
         secondImage={secondImage}
       />
-      <QuickView />
+      <QuickView> hello </QuickView>
     </a>
     <Container p={5}>
       <Blocklink href="#test">
@@ -34,5 +47,5 @@ export const ProductCard = ({
       </Blocklink>
       <Buttons width={[1, 1, 1]} />
     </Container>
-  </Card>
+  </ProductCardContainer>
 );
