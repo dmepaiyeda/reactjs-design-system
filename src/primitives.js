@@ -1,9 +1,9 @@
-import { space, color, layout, typography, border } from 'styled-system';
-import styled from 'styled-components';
+import { space, color, layout, typography, border } from "styled-system";
+import styled from "styled-components";
 
 export const Card = styled.div(
   {
-    boxSizing: 'border-box',
+    boxSizing: "border-box",
     minWidth: 0
   },
   //core
@@ -14,45 +14,54 @@ export const Card = styled.div(
 );
 
 Card.defaultProps = {
-  maxWidth: '25%',
-  bg: '#fafafa',
+  maxWidth: "25%",
+  bg: "#fafafa",
   border: 1
 };
 
 export const QuickView = styled.div(
   props => ({
-    position: 'absolute',
+    position: "absolute",
     height: 20,
     bottom: 0,
-    color: 'blue'
-    // zIndex: 1
+    color: "blue",
+    backgroundColor: "black"
   }),
   layout,
-  space
+  space,
+  border,
+  typography
 );
-QuickView.defaultProps = {};
+QuickView.defaultProps = {
+  display: "block",
+  fontFamily: "",
+  fontSize: 12,
+  height: 32,
+  width: "100%"
+  // ${props => props.theme.colors.blue}
+};
 
 export const Container = styled.div(layout, space, border, typography);
 Container.defaultProps = {
-  display: 'block'
+  display: "block"
 };
 
 export const ProductImg = styled.img(layout); //styled system
 
 ProductImg.defaultProps = {
-  borderColor: '#fafafa'
+  borderColor: "#fafafa"
 };
 
-ProductImg.displayName = 'ProductImg';
+ProductImg.displayName = "ProductImg";
 
 export const BackgroundImg = styled.div(
   props => ({
     height: 0,
     paddingBottom: `${props.aspectRatio * 100}%`,
-    backgroundSize: 'cover',
-    backgroundPosition: '50% 50%',
+    backgroundSize: "cover",
+    backgroundPosition: "50% 50%",
     backgroundImage: `url(${props.image})`,
-    '&:hover': {
+    "&:hover": {
       backgroundImage: `url(${props.secondImage})`
     }
   }),
@@ -62,45 +71,45 @@ export const BackgroundImg = styled.div(
 //position: absolute - quick view
 
 BackgroundImg.defaultProps = {
-  borderColor: '#fafafa',
+  borderColor: "#fafafa",
   aspectRatio: 1
 };
 
-BackgroundImg.displayName = 'BackgroundImg';
+BackgroundImg.displayName = "BackgroundImg";
 
 export const Heading = styled.p(color, space, typography, layout);
 
 Heading.defaultProps = {
-  fontFamily: 'sansSerif',
-  color: 'black',
+  fontFamily: "sansSerif",
+  color: "black",
   fontWeight: 700,
   fontSize: 16,
   margin: 0
 };
-Heading.displayName = 'Heading';
+Heading.displayName = "Heading";
 
 export const Text = styled.p(typography, layout, space, color);
-Text.displayName = 'Text';
+Text.displayName = "Text";
 
 Text.defaultProps = {
-  fontFamily: 'sansSerif',
-  color: 'black',
+  fontFamily: "sansSerif",
+  color: "black",
   fontSize: 14,
   fontWeight: 300
 };
 
 export const Button = styled.button(space, color, border, typography, layout);
-Button.displayName = 'Button';
+Button.displayName = "Button";
 Button.defaultProps = {
   fontSize: 14,
   fontWeight: 700,
-  fontFamily: 'sansSerif',
-  bg: 'white',
+  fontFamily: "sansSerif",
+  bg: "white",
   border: 1,
-  borderColor: 'black',
-  borderStyle: 'solid',
+  borderColor: "black",
+  borderStyle: "solid",
   borderRadius: 3,
-  textAlign: 'center',
+  textAlign: "center",
   minHeight: 40,
   lineHeight: 1
 };
@@ -111,7 +120,7 @@ export const OutlineButton = styled(Button)`
   transition: all 0.5 cubic-bezier(0.165, 0.84, 0.44, 1);
 
   &::after {
-    content: '';
+    content: "";
     box-shadow: 0px 0px 16px 2px rgba(0, 0, 0, 0.2);
     border-radius: inherit;
     opacity: 0;

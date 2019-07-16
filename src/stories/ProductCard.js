@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 import {
   Card,
   Heading,
@@ -8,8 +8,8 @@ import {
   Container,
   Blocklink,
   QuickView
-} from '../../src/primitives';
-import { Buttons } from './button';
+} from "../../src/primitives";
+import { Buttons } from "./button";
 
 const ProductCardContainer = styled(Card)`
   position: relative;
@@ -31,14 +31,14 @@ export const ProductCard = ({
   ...props
 }) => (
   <ProductCardContainer {...props} width={1 / 3}>
-    <a href="#test" style={{ position: 'relative' }}>
+    <a href="#test" style={{ position: "relative" }}>
       <BackgroundImg
         width={1}
         aspectRatio={4 / 3}
         image={image}
         secondImage={secondImage}
       />
-      <QuickView> hello </QuickView>
+      <QuickView> Quick View </QuickView>
     </a>
     <Container p={5}>
       <Blocklink href="#test">
