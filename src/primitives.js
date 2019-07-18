@@ -19,25 +19,27 @@ Card.defaultProps = {
   border: 1
 };
 
-export const QuickView = styled.div(
+export const QuickView = styled.button(
   props => ({
     position: "absolute",
-    height: 20,
+    height: 32,
     bottom: 0,
     color: "blue",
-    backgroundColor: "black"
+    backgroundColor: "white",
+    textAlign: "center",
+    padding: 0,
+    opacity: "0.5"
   }),
   layout,
   space,
   border,
-  typography
+  typography,
+  color
 );
 QuickView.defaultProps = {
-  display: "block",
-  fontFamily: "",
+  fontFamily: "sansSerif",
   fontSize: 12,
-  height: 32,
-  width: "100%"
+  border: "none"
   // ${props => props.theme.colors.blue}
 };
 

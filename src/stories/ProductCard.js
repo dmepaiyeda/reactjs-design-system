@@ -31,14 +31,16 @@ export const ProductCard = ({
   ...props
 }) => (
   <ProductCardContainer {...props} width={1 / 3}>
-    <a href="#test" style={{ position: "relative" }}>
+    <a href="#test" style={{ position: "relative", display: "block" }}>
       <BackgroundImg
         width={1}
         aspectRatio={4 / 3}
         image={image}
         secondImage={secondImage}
       />
-      <QuickView> Quick View </QuickView>
+      <QuickView width={1}>
+        <span style={{ color: "black" }}>Quick View</span>
+      </QuickView>
     </a>
     <Container p={5}>
       <Blocklink href="#test">
