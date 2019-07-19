@@ -16,10 +16,12 @@ const ProductCardContainer = styled(Card)`
 
   ${QuickView} {
     display: none;
+    color: black;
   }
 
   &:hover ${QuickView} {
     display: block;
+    color: blue;
   }
 `;
 
@@ -38,9 +40,7 @@ export const ProductCard = ({
         image={image}
         secondImage={secondImage}
       />
-      <QuickView width={1}>
-        <span style={{ color: "black" }}>Quick View</span>
-      </QuickView>
+      <QuickView width={1}>Quick View</QuickView>
     </a>
     <Container p={5}>
       <Blocklink href="#test">

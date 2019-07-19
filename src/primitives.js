@@ -24,7 +24,6 @@ export const QuickView = styled.button(
     position: "absolute",
     height: 32,
     bottom: 0,
-    color: "blue",
     backgroundColor: "white",
     textAlign: "center",
     padding: 0,
