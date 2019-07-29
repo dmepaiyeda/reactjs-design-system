@@ -16,12 +16,10 @@ const ProductCardContainer = styled(Card)`
 
   ${QuickView} {
     display: none;
-    color: black;
   }
 
   &:hover ${QuickView} {
     display: block;
-    color: blue;
   }
 `;
 

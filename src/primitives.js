@@ -24,10 +24,12 @@ export const QuickView = styled.button(
     position: "absolute",
     height: 32,
     bottom: 0,
-    backgroundColor: "white",
+    backgroundColor: "rgba(250, 249, 247, 0.6)",
     textAlign: "center",
     padding: 0,
-    opacity: "0.5"
+    "&:hover": {
+      color: `${props.theme.colors.blue}`
+    }
   }),
   layout,
   space,
@@ -38,8 +40,9 @@ export const QuickView = styled.button(
 QuickView.defaultProps = {
   fontFamily: "sansSerif",
   fontSize: 12,
-  border: "none"
-  // ${props => props.theme.colors.blue}
+  fontWeight: 700,
+  border: "none",
+  color: "black"
 };
 
 export const Container = styled.div(layout, space, border, typography);
@@ -85,7 +88,7 @@ Heading.defaultProps = {
   color: "black",
   fontWeight: 700,
   fontSize: 16,
-  margin: 0
+  marginTop: 3
 };
 Heading.displayName = "Heading";
 
@@ -112,7 +115,9 @@ Button.defaultProps = {
   borderRadius: 3,
   textAlign: "center",
   minHeight: 40,
-  lineHeight: 1
+  lineHeight: 1,
+  paddingTop: 1,
+  paddingBottom: 1
 };
 
 export const OutlineButton = styled(Button)`
@@ -138,6 +143,8 @@ export const OutlineButton = styled(Button)`
   }
 `;
 
+export const DisabledButton = styled(Button)``;
+
 // export const Blocklink = styled(link)`
 //   text-decoration: none;
 
@@ -162,3 +169,17 @@ export const Blocklink = styled(Link)`
     color: ${props => props.theme.colors.blue};
   }
 `;
+
+// @media (min-width: 1200px)
+// <style>
+// .iWAANa {
+//     width: 100%;
+//     max-width: unset;
+// }
+// @media (min-width: 1200px)
+// <style>
+// .iWAANa {
+//     font-size: 14px;
+//     min-height: 40px;
+//     line-height: 24px;
+// }

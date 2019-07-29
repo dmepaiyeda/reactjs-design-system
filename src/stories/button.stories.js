@@ -4,11 +4,16 @@ import { ThemeProvider } from "styled-components";
 import theme from "../../src/theme/theme";
 import { Buttons } from "./button";
 
-storiesOf("Elements|Buttons", module).add("Outline Button", () => (
+storiesOf("Elements", module).add("Outline Button", () => (
   <div>
-    <p> Button that is used for all product cards </p>
     <ThemeProvider theme={theme}>
       <Buttons />
     </ThemeProvider>
+  </div>
+));
+
+storiesOf("Elements", module).add("Pink Button", () => (
+  <div>
+    <ThemeProvider theme={theme}>{/* <Buttons /> */}</ThemeProvider>
   </div>
 ));
