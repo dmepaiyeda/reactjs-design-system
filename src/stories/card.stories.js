@@ -5,17 +5,18 @@ import { ProductCard } from "./ProductCard";
 import theme from "../theme/theme";
 
 //put styling related stuff in the html and other stuff in the primitives file
-storiesOf("Patterns|ProductCard", module)
+storiesOf("Patterns|Card", module)
   .addParameters({ viewport: { defaultViewport: "iphone6" } })
   .add(
-    "Card",
+    "ProductCard",
     () => (
       <ThemeProvider theme={theme}>
         <ProductCard
-          title="Heading"
-          subtitle="subheading"
+          name="Heading"
+          description="subheading"
           image="https://static-assets.glossier.com/production/spree/images/attachments/000/003/860/portrait_normal/01_ShopGrid.jpg"
           secondImage="https://static-assets.glossier.com/production/spree/images/attachments/000/003/730/portrait_normal/bubblewrap.jpg"
+          price="$$"
         />
       </ThemeProvider>
     ),

@@ -1,13 +1,13 @@
 import React from "react";
-import { OutlineButton, DisabledButton } from "../../src/primitives";
+import { OutlineButton } from "../../src/primitives";
 import { action } from "@storybook/addon-actions";
 
-export const Buttons = ({ ...props }) => (
+export const OutlinedButton = ({ price, ...props }) => (
   <div>
     <div>
       {/* <p>Button that is used for all product cards</p> */}
       <OutlineButton {...props} onClick={action("clicked")}>
-        Outline Button
+        Outline Button - {(price = "$")}
       </OutlineButton>
     </div>
 
@@ -19,3 +19,5 @@ export const Buttons = ({ ...props }) => (
     {/* </div> */}
   </div>
 );
+
+export const PinkButton = ({ ...props }) => <div />;

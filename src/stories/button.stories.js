@@ -2,18 +2,18 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { ThemeProvider } from "styled-components";
 import theme from "../../src/theme/theme";
-import { Buttons } from "./button";
+import { OutlinedButton } from "./button";
 
-storiesOf("Elements", module).add("Outline Button", () => (
+storiesOf("Elements|Buttons", module).add("Outline Button", () => (
   <div>
     <ThemeProvider theme={theme}>
-      <Buttons />
+      <OutlinedButton />
     </ThemeProvider>
   </div>
 ));
 
-storiesOf("Elements", module).add("Pink Button", () => (
+storiesOf("Elements|Buttons", module).add("Pink Button", () => (
   <div>
-    <ThemeProvider theme={theme}>{/* <Buttons /> */}</ThemeProvider>
+    <ThemeProvider theme={theme} />
   </div>
 ));

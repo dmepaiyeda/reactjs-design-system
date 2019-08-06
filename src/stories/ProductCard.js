@@ -9,7 +9,7 @@ import {
   Blocklink,
   QuickView
 } from "../../src/primitives";
-import { Buttons } from "./button";
+import { OutlinedButton } from "./button";
 
 const ProductCardContainer = styled(Card)`
   position: relative;
@@ -26,8 +26,9 @@ const ProductCardContainer = styled(Card)`
 export const ProductCard = ({
   image,
   secondImage,
-  title,
-  subtitle,
+  name,
+  description,
+  price,
   ...props
 }) => (
   <ProductCardContainer {...props} width={1 / 3}>
@@ -42,10 +43,10 @@ export const ProductCard = ({
     </a>
     <Container p={5}>
       <Blocklink href="#test">
-        <Heading>{title}</Heading>
-        <Text>{subtitle}</Text>
+        <Heading>{name}</Heading>
+        <Text>{description}</Text>
       </Blocklink>
-      <Buttons width={[1, 1, 1]} />
+      <OutlinedButton width={[1, 1, 1]}> </OutlinedButton>
     </Container>
   </ProductCardContainer>
 );

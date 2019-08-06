@@ -124,6 +124,7 @@ export const OutlineButton = styled(Button)`
   cursor: pointer;
   position: relative;
   transition: all 0.5 cubic-bezier(0.165, 0.84, 0.44, 1);
+  text-transform: uppercase; //making the text upper case here to improve accessibility
 
   &::after {
     content: "";
