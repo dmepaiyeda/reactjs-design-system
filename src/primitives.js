@@ -144,7 +144,22 @@ export const OutlineButton = styled(Button)`
   }
 `;
 
-export const DisabledButton = styled(Button)``;
+export const PinkButton = styled(Button)`
+  cursor: pointer;
+  position: relative;
+  transition: all 0.5 cubic-bezier(0.165, 0.84, 0.44, 1);
+  text-transform: uppercase; //making the text upper case here to improve accessibility
+  background-color: ${props => props.theme.colors.pink};
+  border-color: ${props => props.theme.colors.pink};
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    background-color: white;
+    border-color: black;
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+`;
 
 // export const Blocklink = styled(link)`
 //   text-decoration: none;

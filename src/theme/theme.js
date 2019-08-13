@@ -1,12 +1,13 @@
 const theme = {
   colors: {
-    black: '#000',
-    white: '#FFF',
-    blue: '#00F'
+    black: "#000",
+    white: "#FFF",
+    blue: "#00F",
+    pink: "#f5e3e7"
   },
   space: [0, 2, 4, 6, 7, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
-    sansSerif: 'Apercu, Calibri, sans-serif'
+    sansSerif: "Apercu, Calibri, sans-serif"
   },
   fontSizes: [14, 16],
   fontWeights: [700],
