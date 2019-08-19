@@ -10,7 +10,7 @@ storiesOf("Features|Product List", module).add("Product List", () => (
     <p> Product list </p>
     <ThemeProvider theme={theme}>
       <ProductList title="Products">
-        {[0, 1, 2, 3, 4, 5].map(key => (
+        {[0, 1, 2, 3, 4, 5].map((key, name) => (
           <ProductCard
             key={key}
             name="Heading"

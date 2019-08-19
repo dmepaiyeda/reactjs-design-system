@@ -1,22 +1,31 @@
 import { space, color, layout, typography, border } from "styled-system";
 import styled from "styled-components";
 
+export const Container = styled.div(layout, space, border, typography);
+Container.defaultProps = {
+  display: "block"
+};
+
 export const Card = styled.div(
   {
     boxSizing: "border-box",
-    minWidth: 0
+    minWidth: 0,
+    overflow: "hidden"
   },
   //core
   space,
   color,
   typography,
-  layout
+  layout,
+  border
 );
 
 Card.defaultProps = {
   maxWidth: "25%",
   bg: "#fafafa",
-  border: 1
+  border: 1,
+  marginRight: 16,
+  borderRadius: 3
 };
 
 export const QuickView = styled.button(
@@ -45,10 +54,18 @@ QuickView.defaultProps = {
   color: "black"
 };
 
-export const Container = styled.div(layout, space, border, typography);
-Container.defaultProps = {
-  display: "block"
-};
+//styled components
+export const Link = styled.a`
+  text-decoration: none;
+`;
+
+export const Blocklink = styled(Link)`
+  &:focus > *,
+  &:hover > * {
+    text-decoration: underline ${props => props.theme.colors.blue};
+    color: ${props => props.theme.colors.blue};
+  }
+`;
 
 export const ProductImg = styled.img(layout); //styled system
 
@@ -81,6 +98,15 @@ BackgroundImg.defaultProps = {
 
 BackgroundImg.displayName = "BackgroundImg";
 
+export const Badge = styled.div(
+  props => ({
+    color: `${props.colors.white}`
+  }),
+  space,
+  color,
+  typography
+);
+
 export const Heading = styled.p(color, space, typography, layout);
 
 Heading.defaultProps = {
@@ -102,6 +128,7 @@ Text.defaultProps = {
   fontWeight: 300
 };
 
+//Buttons
 export const Button = styled.button(space, color, border, typography, layout);
 Button.displayName = "Button";
 Button.defaultProps = {
@@ -158,31 +185,6 @@ export const PinkButton = styled(Button)`
     background-color: white;
     border-color: black;
     transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
-  }
-`;
-
-// export const Blocklink = styled(link)`
-//   text-decoration: none;
-
-//   &:focus,
-//   &:hover,
-//   &:visited,
-//   &:link,
-//   &:active {
-//     text-decoration: none;
-//   }
-// `;
-
-//styled components
-export const Link = styled.a`
-  text-decoration: none;
-`;
-
-export const Blocklink = styled(Link)`
-  &:focus > *,
-  &:hover > * {
-    text-decoration: underline ${props => props.theme.colors.blue};
-    color: ${props => props.theme.colors.blue};
   }
 `;
 

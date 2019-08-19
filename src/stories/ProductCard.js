@@ -13,7 +13,6 @@ import { OutlinedButtonComponent } from "./button";
 
 const ProductCardContainer = styled(Card)`
   position: relative;
-
   ${QuickView} {
     display: none;
   }
