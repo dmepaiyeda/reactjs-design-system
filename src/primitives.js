@@ -100,7 +100,7 @@ BackgroundImg.displayName = "BackgroundImg";
 
 export const Badge = styled.div(
   props => ({
-    color: `${props.colors.white}`
+    color: `${props.theme.colors.white}`
   }),
   space,
   color,
@@ -165,9 +165,23 @@ export const OutlineButton = styled(Button)`
     height: 100%;
     transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
+
   &:hover::after,
   &:focus::after {
     opacity: 1;
+  }
+
+  &:disabled {
+    background-color: red;
+    transition: none;
+    box-shadow: none;
+  }
+
+  &:hover::disabled {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    transition: none;
+    box-shadow: none;
   }
 `;
 
