@@ -1,6 +1,5 @@
 import { space, color, layout, typography, border } from "styled-system";
 import styled from "styled-components";
-import { whileStatement } from "@babel/types";
 
 export const Container = styled.div(layout, space, border, typography);
 Container.defaultProps = {
@@ -183,12 +182,29 @@ export const PinkButton = styled(Button)`
   background-color: ${props => props.theme.colors.pink};
   border-color: ${props => props.theme.colors.pink};
 
+  &::after {
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  &:hover:enabled:after,
+  &:focus:enabled:after {
+    opacity: 1;
+    background-color: ${props => props.theme.colors.pink};
+    border-color: ${props => props.theme.colors.pink};
+  }
+
   &:hover,
   &:focus {
-    opacity: 1;
     background-color: white;
     border-color: black;
-    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    border-color: ${props => props.theme.colors.pink};
+    background-color: ${props => props.theme.colors.pink};
+    color: black;
+    border-radius: 0px;
   }
 `;
 

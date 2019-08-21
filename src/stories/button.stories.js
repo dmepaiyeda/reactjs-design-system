@@ -27,3 +27,11 @@ storiesOf("Elements|Buttons", module).add("Disabled Button", () => (
     </ThemeProvider>
   </div>
 ));
+
+storiesOf("Elements|Buttons", module).add("DiscountCode Button", () => (
+  <div>
+    <ThemeProvider theme={theme}>
+      <PinkButtonComponent disabled />
+    </ThemeProvider>
+  </div>
+));
