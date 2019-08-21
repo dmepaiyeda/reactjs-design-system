@@ -3,6 +3,6 @@ import { Badge } from "../primitives";
 
 export const BadgesComponent = ({ content, ...props }) => (
   <div {...props}>
-    <Badge />
+    <Badge> {content}</Badge>
   </div>
 );

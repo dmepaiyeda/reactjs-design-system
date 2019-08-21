@@ -1,5 +1,6 @@
 import { space, color, layout, typography, border } from "styled-system";
 import styled from "styled-components";
+import { whileStatement } from "@babel/types";
 
 export const Container = styled.div(layout, space, border, typography);
 Container.defaultProps = {
@@ -98,14 +99,10 @@ BackgroundImg.defaultProps = {
 
 BackgroundImg.displayName = "BackgroundImg";
 
-export const Badge = styled.div(
-  props => ({
-    color: `${props.theme.colors.white}`
-  }),
-  space,
-  color,
-  typography
-);
+export const Badge = styled.div(props => ({}), space, color, typography);
+Badge.defaultProps = {
+  color: "black"
+};
 
 export const Heading = styled.p(color, space, typography, layout);
 
@@ -166,22 +163,15 @@ export const OutlineButton = styled(Button)`
     transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 
-  &:hover::after,
-  &:focus::after {
+  &:hover:enabled:after,
+  &:focus:enabled:after {
     opacity: 1;
   }
 
   &:disabled {
-    background-color: red;
-    transition: none;
-    box-shadow: none;
-  }
-
-  &:hover::disabled {
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    transition: none;
-    box-shadow: none;
+    cursor: not-allowed;
+    border-color: rgb(217, 217, 217);
+    color: rgb(217, 217, 217);
   }
 `;
 

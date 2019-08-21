@@ -18,11 +18,3 @@ export const PinkButtonComponent = ({ ...props }) => (
     <PinkButton {...props}> Pink Button</PinkButton>
   </div>
 );
-
-export const DisabledButtonComponent = ({ ...props }) => (
-  <div>
-    <OutlineButton {...props} onClick={action("clicked")} disabled>
-      Disabled Button
-    </OutlineButton>
-  </div>
-);
