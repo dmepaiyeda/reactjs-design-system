@@ -7,7 +7,7 @@ export const OutlinedButtonComponent = ({ price, ...props }) => (
     <div>
       {/* <p>Button that is used for all product cards</p> */}
       <OutlineButton {...props} onClick={action("clicked")}>
-        Outline Button - {(price = "$")}
+        Add to bag - {(price = "$")}
       </OutlineButton>
     </div>
   </div>
@@ -15,6 +15,6 @@ export const OutlinedButtonComponent = ({ price, ...props }) => (
 
 export const PinkButtonComponent = ({ ...props }) => (
   <div>
-    <PinkButton {...props}> Pink Button</PinkButton>
+    <PinkButton {...props}> Checkout </PinkButton>
   </div>
 );

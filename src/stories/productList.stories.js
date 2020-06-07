@@ -14,7 +14,7 @@ storiesOf("Features|Product List", module).add("Product List", () => (
           <ProductCard
             key={key}
             name="Heading"
-            description="subheading"
+            description="description"
             image="https://static-assets.glossier.com/production/spree/images/attachments/000/003/860/portrait_normal/01_ShopGrid.jpg"
             secondImage="https://static-assets.glossier.com/production/spree/images/attachments/000/003/730/portrait_normal/bubblewrap.jpg"
             price="$$"

@@ -3,6 +3,8 @@ import { storiesOf } from "@storybook/react";
 import { ThemeProvider } from "styled-components";
 import theme from "../theme/theme";
 import { BadgesComponent } from "./badges";
+import badgeNotes from '../../documentation/badge.md'
+
 
 storiesOf("Elements|Badges", module).add("Badge", () => (
   <div>
@@ -10,4 +12,9 @@ storiesOf("Elements|Badges", module).add("Badge", () => (
       <BadgesComponent content="content" />
     </ThemeProvider>
   </div>
-));
+),
+{
+  notes: badgeNotes
+},
+);
+
